@@ -1,0 +1,26 @@
+.modal {
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__window {
+    background-color: white;
+    width: 600px;
+    padding: 20px;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__title {
+    font-weight: bold;
+    font-size: 1.4rem;
+}

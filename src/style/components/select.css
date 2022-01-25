@@ -1,0 +1,13 @@
+.vs__search::placeholder,
+.vs__dropdown-toggle,
+.vs__dropdown-menu {
+    border: 2px solid var(--light-grey);
+    border-radius: 0;
+}
+.vs__dropdown-option--highlight {
+    background-color: var(--primary);
+}
+
+.error .vs__dropdown-toggle {
+    border-color: var(--error);
+}

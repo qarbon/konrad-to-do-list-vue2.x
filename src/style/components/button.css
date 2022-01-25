@@ -1,0 +1,47 @@
+.button {
+    background-color: var(--primary);
+    color: white;
+    height: 40px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.icon-button:hover,
+.button:hover {
+    filter: brightness(1.3);
+}
+
+.button,
+.icon-button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.icon-button {
+    background-color: var(--primary);
+    height: 35px;
+    width: 35px;
+}
+
+.icon-button.secondary {
+    background-color: transparent;
+}
+
+.icon-button img {
+    height: 50%;
+    width: 50%;
+    filter: invert();
+}
+
+.icon-button.secondary img {
+    filter: unset;
+}
+
+.button:disabled {
+    background-color: var(--dark-grey);
+    cursor: not-allowed;
+}

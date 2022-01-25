@@ -1,0 +1,11 @@
+.add-edit-task-modal {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.add-edit-task-modal__action-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}

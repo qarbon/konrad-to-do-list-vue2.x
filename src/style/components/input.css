@@ -1,0 +1,59 @@
+
+.text-input {
+    width: 100%;
+}
+
+.text-input__label {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.text-input textarea,
+.text-input input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 2px solid var(--light-grey);
+    color: var(--text-color);
+    font-size: 0.9em;
+}
+
+.text-input textarea::placeholder,
+.text-input input::placeholder {
+    color: var(--dark-grey);
+}
+.text-input textarea :focus-visible,
+.text-input textarea :active,
+.text-input input :focus-visible,
+.text-input input :active {
+    border-color: var(--dark-grey);
+    color: var(--text-color);
+}
+
+.text-input__error {
+    height: 1.4em;
+    font-size: 0.8rem;
+    color: var(--error)
+}
+
+.date-input input {
+    text-align: center;
+}
+
+.date-input__wrapper {
+    display: grid;
+    grid-template-columns: 70px 70px 140px;
+    gap: 10px;
+}
+
+.text-input textarea.error,
+.text-input input.error {
+    border-color: var(--error)
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+

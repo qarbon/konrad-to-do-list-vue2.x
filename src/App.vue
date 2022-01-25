@@ -1,28 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="page-wrapper">
+      <Header />
+      <TaskList />
+    </div>
+    <AddEditTaskModal />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import Header from "./view/header/Header";
+import AddEditTaskModal from "@/view/addEditTaskModal/AddEditTaskModal";
+import TaskList from "./view/taskList/TaskList";
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {TaskList, AddEditTaskModal, Header}
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
 }
 </style>
