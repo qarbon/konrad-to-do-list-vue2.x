@@ -24,9 +24,9 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
-import Modal from '../../components/modal/Modal';
-import Input from '../../components/form/Input';
-import Button from '../../components/button/Button';
+import Modal from '@/components/modal/Modal';
+import Input from '@/components/form/Input';
+import Button from '@/components/button/Button';
 
 export default {
   name: 'CommentModal',

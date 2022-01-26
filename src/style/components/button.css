@@ -25,6 +25,8 @@
     background-color: var(--primary);
     height: 35px;
     width: 35px;
+    min-height: 35px;
+    min-width: 35px;
 }
 
 .icon-button.secondary {

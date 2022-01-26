@@ -21,7 +21,7 @@
 <script>
 import { mapActions, mapGetters } from 'vuex';
 import TaskRow from './TaskRow';
-import Button from '../../components/button/Button';
+import Button from '@/components/button/Button';
 
 export default {
   name: 'TaskList',

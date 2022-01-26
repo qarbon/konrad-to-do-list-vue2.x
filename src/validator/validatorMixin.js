@@ -18,8 +18,8 @@ export default (schema) => ({
       const validatedField = validatorFunc(this.body[field]);
       this.$set(this.error, field, validatedField);
     },
-    validateAll(keys) {
-      (keys || Object.keys(this.body)).forEach((key) => this.validateOne(key));
+    validateAll(keys = null) {
+      (keys || Object.keys(schema)).map((key) => this.validateOne(key));
     },
   },
   watch: {

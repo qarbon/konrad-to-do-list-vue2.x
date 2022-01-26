@@ -13,12 +13,12 @@
 
 <script>
 import moment from 'moment';
-import IconButton from '../../components/button/IconButton';
+import IconButton from '@/components/button/IconButton';
 import chatIcon from '@/assets/icon/chat.png';
 import editIcon from '@/assets/icon/pencil.png';
 import calendarIcon from '@/assets/icon/calendar.png';
 import { mapActions } from 'vuex';
-import CheckBox from '../../components/form/CheckBox';
+import CheckBox from '@/components/form/CheckBox';
 
 export default {
   name: 'TaskRow',

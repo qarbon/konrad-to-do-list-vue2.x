@@ -1,5 +1,5 @@
 <template>
-  <Modal :title="isEdit ? 'Update task' : 'New task'" :open="open" @close="closeModal">
+  <Modal :title="isEdit ? 'Update task' : 'New task'" :open="open" @close="handleCloseModal">
     <div class="add-edit-task-modal">
       <Input
           label="Title:"
@@ -92,12 +92,17 @@ export default {
         this.closeModal();
       }
     },
+    handleCloseModal() {
+      this.body = emptyBody();
+      this.error = {};
+      this.closeModal();
+    },
   },
   watch: {
     task: {
       deep: true,
       handler(val) {
-        this.body = { ...val };
+        this.body = val ? { ...val } : emptyBody();
       },
     },
   },

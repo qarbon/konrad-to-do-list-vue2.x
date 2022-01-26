@@ -1,6 +1,6 @@
 export const taskSchema = {
-  title: 'isRequire',
+  title: 'isStringMax100',
   description: 'isRequire',
-  dueDate: 'isDate',
+  dueDate: 'isTodayOrAfter',
   priority: 'isRequire',
 };

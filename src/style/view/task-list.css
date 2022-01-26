@@ -46,15 +46,22 @@
     padding: 10px 0;
 }
 
+.task-row__title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
 @media (max-width: 650px) {
     .task-row {
         display: flex;
         flex-wrap: wrap;
     }
-    .task-row__date,
+    .task-row__date {
+        width: 100%;
+    }
     .task-row__title {
-        width: 70%;
+        width: 250px;
     }
 
     .task-row__date {

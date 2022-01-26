@@ -4,7 +4,9 @@ import 'vue-select/dist/vue-select.css';
 import './style/style.css';
 import store from '@/store';
 import vSelect from 'vue-select';
+import VueMask from 'v-mask';
 
+Vue.use(VueMask);
 Vue.component('VSelect', vSelect);
 
 Vue.config.productionTip = false;

@@ -2,9 +2,9 @@
   <div class="date-input">
     <label class="text-input__label">{{ label }}</label>
     <div class="date-input__wrapper">
-      <Input v-model="body.day" placeholder="DD" type="number" @blur="handleBlur" hideErrorMessage :error="error"/>
-      <Input v-model="body.month" placeholder="MM" type="number" @blur="handleBlur" hideErrorMessage :error="error"/>
-      <Input v-model="body.year" placeholder="AAAA" type="number" @blur="handleBlur" hideErrorMessage :error="error"/>
+      <Input v-model="body.day" v-mask="'##'" placeholder="DD" type="number" @blur="handleBlur" hideErrorMessage :error="error"/>
+      <Input v-model="body.month" v-mask="'##'" placeholder="MM" type="number" @blur="handleBlur" hideErrorMessage :error="error"/>
+      <Input v-model="body.year" v-mask="'####'" placeholder="AAAA" type="number" @blur="handleBlur" hideErrorMessage :error="error"/>
     </div>
     <div class="text-input__error">
       {{ error }}

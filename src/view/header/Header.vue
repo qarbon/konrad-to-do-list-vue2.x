@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Button from '../../components/button/Button';
+import Button from '@/components/button/Button';
 import { mapActions } from 'vuex';
 
 export default {
@@ -19,7 +19,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-
-</style>
