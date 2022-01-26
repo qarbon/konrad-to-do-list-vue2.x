@@ -8,16 +8,16 @@
 </template>
 
 <script>
-import Button from "../../components/button/Button";
-import {mapActions} from "vuex";
+import Button from '../../components/button/Button';
+import { mapActions } from 'vuex';
 
 export default {
-name: "Header",
-  components: {Button},
+  name: 'Header',
+  components: { Button },
   methods: {
     ...mapActions('addEditTask', ['openModal']),
-  }
-}
+  },
+};
 </script>
 
 <style scoped>

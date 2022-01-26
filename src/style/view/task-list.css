@@ -1,5 +1,6 @@
 .task-list {
     padding-bottom: 20px;
+    overflow-y: auto;
 }
 
 .task-list__empty-row {
@@ -29,6 +30,7 @@
     align-items: center;
 }
 
+
 .task-row__date {
     display: flex;
     justify-content: space-between;
@@ -38,4 +40,24 @@
 .task-row__date img {
     width: 30px;
     height: 30px;
+}
+
+.task-list__manage {
+    padding: 10px 0;
+}
+
+
+@media (max-width: 650px) {
+    .task-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .task-row__date,
+    .task-row__title {
+        width: 70%;
+    }
+
+    .task-row__date {
+        justify-content: left;
+    }
 }

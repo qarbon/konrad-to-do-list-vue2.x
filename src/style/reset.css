@@ -18,3 +18,7 @@ input, textarea {
     all: unset;
     box-sizing: border-box;
 }
+
+img, button {
+    user-select: none;
+}

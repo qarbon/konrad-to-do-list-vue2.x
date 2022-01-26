@@ -1,5 +1,10 @@
 # pawa-task
 
+## Before setup
+```
+Install node v16.13.2
+```
+
 ## Project setup
 ```
 yarn install
@@ -19,6 +24,3 @@ yarn build
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

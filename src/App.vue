@@ -5,18 +5,23 @@
       <TaskList />
     </div>
     <AddEditTaskModal />
+    <CommentModal />
   </div>
 </template>
 
 <script>
 
-import Header from "./view/header/Header";
-import AddEditTaskModal from "@/view/addEditTaskModal/AddEditTaskModal";
-import TaskList from "./view/taskList/TaskList";
+import Header from './view/header/Header';
+import AddEditTaskModal from '@/view/addEditTaskModal/AddEditTaskModal';
+import TaskList from './view/taskList/TaskList';
+import CommentModal from './view/commentModal/CommentModal';
+
 export default {
   name: 'App',
-  components: {TaskList, AddEditTaskModal, Header}
-}
+  components: {
+    CommentModal, TaskList, AddEditTaskModal, Header,
+  },
+};
 </script>
 
 <style>

@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: "Input",
+  name: 'Input',
   props: {
     label: {
       type: String,
@@ -50,18 +50,18 @@ export default {
     hideErrorMessage: {
       type: Boolean,
       default: false,
-    }
+    },
   },
   methods: {
     handleInput(e) {
       this.$emit(
-          'input',
-          this.type === 'number' ? Number(e.target.value) : e.target.value,
+        'input',
+        this.type === 'number' ? Number(e.target.value) : e.target.value,
       );
     },
     handleBlur() {
       this.$emit('blur');
     },
   },
-}
+};
 </script>

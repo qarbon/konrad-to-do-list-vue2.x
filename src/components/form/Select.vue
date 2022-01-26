@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: "Select",
+  name: 'Select',
   props: {
     label: {
       type: String,
@@ -33,14 +33,14 @@ export default {
     },
     options: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
 
   },
   methods: {
     handleInput(e) {
-      this.$emit('input', e)
+      this.$emit('input', e);
     },
   },
-}
+};
 </script>

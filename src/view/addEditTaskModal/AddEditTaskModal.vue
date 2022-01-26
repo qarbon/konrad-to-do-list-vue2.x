@@ -41,27 +41,29 @@
 </template>
 
 <script>
-import Modal from "@/components/modal/Modal";
-import {mapActions, mapGetters} from "vuex";
-import Input from "@/components/form/Input";
-import Button from "@/components/button/Button";
-import DateInput from "../../components/form/DateInput";
-import {taskSchema} from "../../validator/schema/taskValidator";
-import Select from "../../components/form/Select";
-import TextArea from "../../components/form/TextArea";
-import validatorMixin from "../../validator/validatorMixin";
+import Modal from '@/components/modal/Modal';
+import { mapActions, mapGetters } from 'vuex';
+import Input from '@/components/form/Input';
+import Button from '@/components/button/Button';
+import DateInput from '../../components/form/DateInput';
+import { taskSchema } from '../../validator/schema/taskValidator';
+import Select from '../../components/form/Select';
+import TextArea from '../../components/form/TextArea';
+import validatorMixin from '../../validator/validatorMixin';
 
 const emptyBody = () => ({
   title: null,
   description: null,
   dueDate: null,
   priority: null,
-  comment: null
-})
+  comment: null,
+});
 
 export default {
-  name: "AddEditTaskModal",
-  components: {TextArea, Select, DateInput, Button, Input, Modal},
+  name: 'AddEditTaskModal',
+  components: {
+    TextArea, Select, DateInput, Button, Input, Modal,
+  },
   mixins: [validatorMixin(taskSchema)],
   data: () => ({
     body: emptyBody(),
@@ -71,23 +73,23 @@ export default {
     ...mapGetters('addEditTask', ['open', 'task']),
     isEdit() {
       return !!this.body.id;
-    }
+    },
   },
   methods: {
     ...mapActions('addEditTask', ['closeModal']),
     ...mapActions('task', ['createTask', 'updateTask']),
     async handleSubmit() {
-      this.validateAll()
-      await this.$nextTick()
-      if(!this.checkIsError()) {
-        if(this.isEdit) {
-          await this.updateTask(this.body)
+      this.validateAll();
+      await this.$nextTick();
+      if (!this.checkIsError()) {
+        if (this.isEdit) {
+          await this.updateTask(this.body);
         } else {
-          await this.createTask(this.body)
+          await this.createTask(this.body);
         }
-        this.body = emptyBody()
-        this.error = {}
-        this.closeModal()
+        this.body = emptyBody();
+        this.error = {};
+        this.closeModal();
       }
     },
   },
@@ -95,9 +97,9 @@ export default {
     task: {
       deep: true,
       handler(val) {
-          this.body = { ...val }
-      }
-    }
+        this.body = { ...val };
+      },
+    },
   },
-}
+};
 </script>

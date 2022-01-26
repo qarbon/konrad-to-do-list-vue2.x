@@ -6,17 +6,17 @@
 
 <script>
 export default {
-  name: "Button",
+  name: 'Button',
   props: {
     disabled: {
       type: Boolean,
       default: false,
-    }
+    },
   },
-  methods :{
+  methods: {
     handleClick(e) {
-      this.$emit('click', e)
-    }
-  }
-}
+      this.$emit('click', e);
+    },
+  },
+};
 </script>

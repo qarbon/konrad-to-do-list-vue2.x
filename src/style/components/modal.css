@@ -24,3 +24,10 @@
     font-weight: bold;
     font-size: 1.4rem;
 }
+
+@media (max-width: 650px) {
+    .modal__window {
+        width: 95vw;
+        height: 95vh;
+    }
+}

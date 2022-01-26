@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "IconButton",
+  name: 'IconButton',
   props: {
     icon: {
       type: String,
@@ -15,12 +15,12 @@ export default {
     secondary: {
       type: Boolean,
       require: false,
-    }
+    },
   },
   methods: {
     handleClick(e) {
-      this.$emit('click', e)
-    }
-  }
-}
+      this.$emit('click', e);
+    },
+  },
+};
 </script>

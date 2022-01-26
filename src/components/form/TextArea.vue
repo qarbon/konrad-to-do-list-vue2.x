@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "TextArea",
+  name: 'TextArea',
   props: {
     label: {
       type: String,
@@ -41,7 +41,7 @@ export default {
     hideErrorMessage: {
       type: Boolean,
       default: false,
-    }
+    },
   },
   methods: {
     handleInput(e) {
@@ -51,5 +51,5 @@ export default {
       this.$emit('blur');
     },
   },
-}
+};
 </script>

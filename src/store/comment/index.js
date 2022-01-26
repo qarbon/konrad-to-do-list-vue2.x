@@ -1,3 +1,5 @@
+import callApi from '../../api/callApi';
+
 export default {
   namespaced: true,
   state: {
@@ -13,17 +15,25 @@ export default {
     },
   },
   actions: {
-    openModal(_, task = null) {
+    openCommentModal(_, task) {
       _.commit('SET_MODAL_OPEN', true);
       _.commit('SET_TASK', task);
     },
-    closeModal(_) {
+    closeCommentModal(_) {
       _.commit('SET_MODAL_OPEN', false);
       _.commit('SET_TASK', null);
+    },
+    async addComment(_, comment) {
+      const { id } = _.state.task;
+      await callApi('task/updateComment', { id, comment });
+      const res = await callApi('task/get', { id });
+      if (res.success) {
+        _.commit('SET_TASK', res.result);
+      }
     },
   },
   getters: {
     open: (state) => state.open,
-    task: (state) => state.task,
+    task: (state) => state.task || {},
   },
 };

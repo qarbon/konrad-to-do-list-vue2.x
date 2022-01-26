@@ -13,55 +13,55 @@
 </template>
 
 <script>
-import Input from "./Input";
+import Input from './Input';
 
 export default {
-  name: "DateInput",
-  components: {Input},
+  name: 'DateInput',
+  components: { Input },
   data: () => ({
     body: {
       day: undefined,
       month: undefined,
       year: undefined,
-    }
+    },
   }),
   props: {
     label: {
       type: String,
-      default: null
+      default: null,
     },
     value: {
       type: String,
       default: '',
-      require: true
+      require: true,
     },
     error: {
       type: String,
       default: null,
-      require: true
-    }
+      require: true,
+    },
   },
   watch: {
     body: {
       deep: true,
       handler(val) {
-        const { day, month, year } = val
-        const date = `${year}-${month}-${day}`
-        this.$emit('input', date)
-      }
-    }
+        const { day, month, year } = val;
+        const date = `${year}-${month}-${day}`;
+        this.$emit('input', date);
+      },
+    },
   },
   methods: {
     handleBlur(e) {
-      this.$emit('blur',e)
-    }
+      this.$emit('blur', e);
+    },
   },
   mounted() {
     if (!this.value) return;
-    const [year, month, day ] = this.value.split('-')
+    const [year, month, day] = this.value.split('-');
     if (day && month && year) {
       this.body = { day, month, year };
     }
-  }
-}
+  },
+};
 </script>

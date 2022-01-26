@@ -1,0 +1,20 @@
+.checkbox {
+    display: flex;
+}
+
+.checkbox__box {
+    height: 25px;
+    width: 25px;
+    border: 2px solid var(--dark-grey);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox__box .checked {
+    background-color: var(--primary);
+    height: 15px;
+    width: 15px;
+    border-radius: 1px;
+}
