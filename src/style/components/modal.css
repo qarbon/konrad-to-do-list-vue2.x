@@ -23,6 +23,8 @@
 .modal__title {
     font-weight: bold;
     font-size: 1.4rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 @media (max-width: 650px) {

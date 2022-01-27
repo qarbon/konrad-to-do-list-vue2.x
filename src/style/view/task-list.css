@@ -47,9 +47,9 @@
 }
 
 .task-row__title {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: calc(100% - 270px);
 }
 
 @media (max-width: 650px) {
